@@ -1,0 +1,33 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+        margin: 0;
+        padding: 0;
+    }
+}   
+.content{
+    position: relative;
+    height: 100%;
+    .floor{
+        position: fixed;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+    }
+    .highLightFloor{
+        background-color: orange;
+    }
+    .floor_content{
+        height: 100%;
+        overflow-y: scroll;
+        li{
+            line-height: 10rem;
+            background-color: skyblue;
+            border-bottom: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+    }
+}

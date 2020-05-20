@@ -1,0 +1,12 @@
+<div class="content">
+    <ul class="floor" *ngIf="floor.length>0">
+        <li *ngFor="let item of floor;let floorIndex = index;" [class.highLightFloor]="floorIndex === index" (click)="changeContent(floorIndex)">{{item.title}}</li>
+    </ul>
+    <ul #floorBox class="floor_content" (appDebounceScroll)="1" (handleScroll)="changeFloor($event)">
+    <!-- <ul #floorBox class="floor_content" > -->
+        <li *ngFor="let item of floor;let floorIndex = index;">
+            <input type="text" />
+            {{item.content}}
+        </li>
+    </ul>
+</div>
